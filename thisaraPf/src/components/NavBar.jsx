@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import logo from "../assets/img/logo.svg";
+import navIcon1 from "../assets/img/nav-icon1.svg";
+import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon3 from "../assets/img/nav-icon3.svg";
+
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState("home");
-    const [scroll, setScroll] = useState(false);
+    const [scrolled, setScroll] = useState(false);
 
     useEffect(() => {
         const onScroll = () => {
@@ -24,17 +29,14 @@ export const NavBar = () => {
         setActiveLink(link);
     }
 
-    
+
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" :""}>
             <Container>
                 <Navbar.Brand href="#home">
                     <img
-                        src="https://www.flaticon.com/svg/vstatic/svg/174/174857.svg?token=exp=1629355719~hmac=5e1f3d3c5c7d5a0a1f1c5c1e1b2d8f4b"
-                        width="30"
-                        height="30"
-                        className="d-inline-block align-top"
-                        alt="React Bootstrap logo"
+                        src={logo}
+                        alt="logo"
                     />
                     React Bootstrap
                 </Navbar.Brand>
@@ -48,10 +50,10 @@ export const NavBar = () => {
                         <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : "navbar-link"} onClick={()=> onUpdateActiveLink('projects')}>Projects</Nav.Link>
                     </Nav>
                     <span className="navbar-text">
-                        <div className="social-icons">
-                            <a href="#"><img src={""} alt=""/></a>
-                            <a href="#"><img src={""} alt=""/></a>
-                            <a href="#"><img src={""} alt=""/></a>
+                        <div className="social-icon">
+                            <a href="#"><img src={navIcon1} alt=""/></a>
+                            <a href="#"><img src={navIcon2} alt=""/></a>
+                            <a href="#"><img src={navIcon3} alt=""/></a>
                         </div>
                         <button className="vvd" onClick={() => console.log("connect")}><span>Let's Connect</span></button>
                     </span>
