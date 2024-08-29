@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
-import HeaderImg from '../assets/img/header-img.svg'
+import HeaderImg from '../assets/img/my.png'
+import { HashLink } from 'react-router-hash-link'
 
 export default function Banner() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRoute = ["front-end", "back-end", "full-stack"];
+    //const toRoute = ["front-end", "back-end", "full-stack"];
     const [text, setText] = useState("");
     const [delta, setDelta] = useState(300- Math.random() * 100);
     const period = 2000;
@@ -51,9 +52,11 @@ export default function Banner() {
             <Row className='align-item-center'>
                 <Col xs={12} md={6} xl={7}>
                  <span className='tagline'>Welcome to my Portfolio</span>
-                    <h1>{"Hi, I'm Thisara Bandara"} <span className='wrap'>{text}</span></h1>
+                    <h1>{"Hi, I'm Thisara Bandara"}<span></span></h1>
                     <p>See the world throught technical eyes and come to develop technically</p>
+                    <HashLink to='#connect'>
                     <button onClick={() => console.log("connect")}>Let's Connect <ArrowRightCircle size={25}/> </button>
+                    </HashLink>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
                 <img src={HeaderImg} alt='header img' />
