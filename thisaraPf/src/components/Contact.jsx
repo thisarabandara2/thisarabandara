@@ -8,6 +8,7 @@ export default function Contact() {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        
 
         emailjs
             .sendForm('service_d1olm5d', 'template_n4fchns', form.current, {
@@ -21,6 +22,7 @@ export default function Contact() {
                     console.log('FAILED...', error.text);
                 },
             );
+        e.target.reset();
     };
 
 
