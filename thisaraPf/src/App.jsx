@@ -8,6 +8,10 @@ import Banner from './components/Banner'
 import { Skills } from './components/Skills'
 import { ProjectCard } from './components/ProjectCard'
 import { Projects } from './components/Projects'
+import Contact from './components/Contact'
+import { BrowserRouter } from 'react-router-dom'; 
+import { Footer } from './components/Footer'
+import AboutMe from './components/AboutMe'
 
 
 
@@ -20,6 +24,9 @@ function App() {
       <Banner />
       <Skills />
       <Projects/>
+      <AboutMe/>
+      <Contact/>
+      <Footer/>
 
       </div>
   )
