@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutMe() {
     return (
-        <section className='about' id='about'>
+        <section className='about' id='about' style={{ minHeight: '710px', padding: '60px 0' }}>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12 text-center'>
@@ -42,6 +42,7 @@ export default function AboutMe() {
                                 <small></small>
                             </li>
                         </ul>
+                        
                     </div>
                     <div className='col-md-6'>
                         <h3 className='mb-3'>Skills</h3>
